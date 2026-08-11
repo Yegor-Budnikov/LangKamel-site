@@ -1,176 +1,597 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy &amp; data handling — LangKamel</title>
-<meta name="description" content="What data the LangKamel GDPR Cookie Banner app for Shopify stores, what it does not store, how long records are kept, and where they are hosted.">
-<style>
-  :root{
-    --ink:#14171C;
-    --ink-soft:#4A525C;
-    --paper:#FBFAF7;
-    --rule:#DFD9CF;
-    --sand:#B5834E;
-    --panel:#F3EFE8;
-    --measure:34rem;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:17px;
-    line-height:1.65;
-  }
-  .wrap{max-width:52rem;margin:0 auto;padding:3.5rem 1.5rem 6rem}
-  header{border-bottom:2px solid var(--ink);padding-bottom:1.75rem;margin-bottom:3rem}
-  .brand{
-    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
-    font-size:1.05rem;letter-spacing:.02em;margin:0 0 1.5rem;
-  }
-  .brand span{color:var(--sand)}
-  h1{
-    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
-    font-weight:400;font-size:clamp(2rem,5vw,2.9rem);line-height:1.12;
-    margin:0 0 .75rem;letter-spacing:-.01em;
-  }
-  .lede{max-width:var(--measure);color:var(--ink-soft);margin:0}
-  .updated{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
-    color:var(--ink-soft);margin:1.5rem 0 0;
-  }
-  section{
-    display:grid;grid-template-columns:12rem 1fr;gap:2.5rem;
-    padding:2.25rem 0;border-top:1px solid var(--rule);
-  }
-  section:first-of-type{border-top:none;padding-top:0}
-  h2{
-    font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-    margin:.2rem 0 0;color:var(--ink-soft);
-  }
-  .body{max-width:var(--measure)}
-  .body p{margin:0 0 1rem}
-  .body p:last-child{margin-bottom:0}
-  .pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0}
-  .pair > div{background:var(--paper);padding:1.25rem}
-  .pair h3{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;
-    margin:0 0 .9rem;color:var(--ink-soft);
-  }
-  .pair .yes h3{color:var(--sand)}
-  .pair ul{margin:0;padding:0;list-style:none}
-  .pair li{
-    font-size:.94rem;line-height:1.5;padding:.4rem 0 .4rem .95rem;position:relative;
-  }
-  .pair li::before{
-    content:"";position:absolute;left:0;top:1.05em;
-    width:.4rem;height:1px;background:var(--sand);
-  }
-  .pair .no li::before{background:var(--ink-soft)}
-  .ceiling{
-    background:var(--panel);border-left:3px solid var(--sand);
-    padding:1.1rem 1.25rem;margin:0;max-width:var(--measure);
-  }
-  .ceiling strong{font-weight:600}
-  a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
-  a:focus-visible{outline:2px solid var(--sand);outline-offset:3px;border-radius:2px}
-  footer{
-    margin-top:3.5rem;padding-top:1.75rem;border-top:1px solid var(--rule);
-    font-size:.9rem;color:var(--ink-soft);max-width:var(--measure);
-  }
-  @media (max-width:700px){
-    section{grid-template-columns:1fr;gap:.85rem;padding:1.9rem 0}
-    .pair{grid-template-columns:1fr}
-    .wrap{padding-top:2.5rem}
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Privacy &amp; data handling — LangKamel</title>
+  <meta
+    name="description"
+    content="What data the LangKamel GDPR Cookie Banner app for Shopify stores records, what it does not store, how long records are kept, and where they are hosted."
+  >
+
+  <style>
+    :root{
+      --ink:#14171C;
+      --ink-soft:#4A525C;
+      --paper:#FBFAF7;
+      --rule:#DFD9CF;
+      --sand:#B5834E;
+      --panel:#F3EFE8;
+      --measure:34rem;
+    }
+
+    *{box-sizing:border-box}
+
+    html{-webkit-text-size-adjust:100%}
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size:17px;
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:52rem;
+      margin:0 auto;
+      padding:3.5rem 1.5rem 6rem;
+    }
+
+    header{
+      border-bottom:2px solid var(--ink);
+      padding-bottom:1.75rem;
+      margin-bottom:3rem;
+    }
+
+    .topline{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1.5rem;
+      margin-bottom:1.5rem;
+    }
+
+    .brand{
+      font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+      font-size:1.05rem;
+      letter-spacing:.02em;
+      margin:0;
+    }
+
+    .brand span{color:var(--sand)}
+
+    .language-switch{
+      display:flex;
+      align-items:center;
+      gap:.2rem;
+      flex-shrink:0;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      padding:.15rem;
+      background:var(--paper);
+    }
+
+    .language-switch a{
+      display:block;
+      padding:.28rem .65rem;
+      border-radius:999px;
+      color:var(--ink-soft);
+      text-decoration:none;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.7rem;
+      font-weight:600;
+      letter-spacing:.05em;
+    }
+
+    .language-switch a:hover{
+      color:var(--ink);
+    }
+
+    .language-switch a[aria-current="page"]{
+      background:var(--ink);
+      color:var(--paper);
+    }
+
+    h1{
+      font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+      font-weight:400;
+      font-size:clamp(2rem,5vw,2.9rem);
+      line-height:1.12;
+      margin:0 0 .75rem;
+      letter-spacing:-.01em;
+    }
+
+    .lede{
+      max-width:var(--measure);
+      color:var(--ink-soft);
+      margin:0;
+    }
+
+    .updated{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.78rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      margin:1.5rem 0 0;
+    }
+
+    section{
+      display:grid;
+      grid-template-columns:12rem 1fr;
+      gap:2.5rem;
+      padding:2.25rem 0;
+      border-top:1px solid var(--rule);
+    }
+
+    section:first-of-type{
+      border-top:none;
+      padding-top:0;
+    }
+
+    h2{
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin:.2rem 0 0;
+      color:var(--ink-soft);
+    }
+
+    .body{
+      max-width:var(--measure);
+    }
+
+    .body p{
+      margin:0 0 1rem;
+    }
+
+    .body p:last-child{
+      margin-bottom:0;
+    }
+
+    .pair{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1px;
+      background:var(--rule);
+      border:1px solid var(--rule);
+      margin:0;
+    }
+
+    .pair > div{
+      background:var(--paper);
+      padding:1.25rem;
+    }
+
+    .pair h3{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.75rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      margin:0 0 .9rem;
+      color:var(--ink-soft);
+    }
+
+    .pair .yes h3{
+      color:var(--sand);
+    }
+
+    .pair ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .pair li{
+      font-size:.94rem;
+      line-height:1.5;
+      padding:.4rem 0 .4rem .95rem;
+      position:relative;
+    }
+
+    .pair li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:1.05em;
+      width:.4rem;
+      height:1px;
+      background:var(--sand);
+    }
+
+    .pair .no li::before{
+      background:var(--ink-soft);
+    }
+
+    .ceiling{
+      background:var(--panel);
+      border-left:3px solid var(--sand);
+      padding:1.1rem 1.25rem;
+      margin:0;
+      max-width:var(--measure);
+    }
+
+    .ceiling strong{
+      font-weight:600;
+    }
+
+    a{
+      color:var(--ink);
+      text-decoration-thickness:1px;
+      text-underline-offset:3px;
+    }
+
+    a:focus-visible{
+      outline:2px solid var(--sand);
+      outline-offset:3px;
+      border-radius:2px;
+    }
+
+    .language-switch a:focus-visible{
+      outline-offset:2px;
+    }
+
+    footer{
+      margin-top:3.5rem;
+      padding-top:1.75rem;
+      border-top:1px solid var(--rule);
+      font-size:.9rem;
+      color:var(--ink-soft);
+      max-width:var(--measure);
+    }
+
+    @media (max-width:700px){
+      .topline{
+        align-items:center;
+      }
+
+      section{
+        grid-template-columns:1fr;
+        gap:.85rem;
+        padding:1.9rem 0;
+      }
+
+      .pair{
+        grid-template-columns:1fr;
+      }
+
+      .wrap{
+        padding-top:2.5rem;
+      }
+    }
+
+    @media (max-width:430px){
+      .topline{
+        gap:1rem;
+      }
+
+      .brand{
+        font-size:1rem;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
 <div class="wrap">
 
   <header>
-    <p class="brand">Lang<span>Kamel</span> — GDPR Cookie Banner for Shopify</p>
-    <h1>Privacy &amp; data handling</h1>
-    <p class="lede">This page describes the data the LangKamel app records when it is installed on a Shopify store, what it deliberately does not record, and how long that data is kept.</p>
-    <p class="updated">Last updated 11 August 2026</p>
+    <div class="topline">
+      <p class="brand">Lang<span>Kamel</span> — GDPR Cookie Banner for Shopify</p>
+
+```
+  <nav class="language-switch" aria-label="Language">
+    <a href="?lang=en" data-lang="en">EN</a>
+    <a href="?lang=de" data-lang="de">DE</a>
+  </nav>
+</div>
+
+<!-- EN -->
+<div data-content="en">
+  <h1>Privacy &amp; data handling</h1>
+  <p class="lede">
+    This page describes the data the LangKamel app records when it is installed
+    on a Shopify store, what it deliberately does not record, and how long
+    that data is kept.
+  </p>
+  <p class="updated">Last updated 11 August 2026</p>
+</div>
+
+<!-- DE -->
+<div data-content="de" hidden>
+  <h1>Datenschutz &amp; Datenverarbeitung</h1>
+  <p class="lede">
+    Diese Seite beschreibt, welche Daten die LangKamel-App bei der Installation
+    in einem Shopify-Shop erfasst, welche Daten sie bewusst nicht erfasst und
+    wie lange diese Daten gespeichert werden.
+  </p>
+  <p class="updated">Zuletzt aktualisiert am 11. August 2026</p>
+</div>
+```
+
   </header>
 
-  <section>
-    <h2>What is stored</h2>
-    <div class="body">
-      <div class="pair">
-        <div class="yes">
-          <h3>Recorded</h3>
-          <ul>
-            <li>Timestamp of the consent decision</li>
-            <li>Visitor region (country code)</li>
-            <li>Categories chosen — analytics, marketing, preferences</li>
-            <li>Applied consent model</li>
-            <li>Banner language</li>
-            <li>Policy version ID shown to the visitor</li>
-            <li>Consent identifier returned by Shopify's Customer Privacy API</li>
-            <li>Shop settings — policy URLs, and custom labels on the Pro plan</li>
-          </ul>
-        </div>
-        <div class="no">
-          <h3>Never recorded</h3>
-          <ul>
-            <li>Customer names</li>
-            <li>Email addresses</li>
-            <li>Postal addresses</li>
-            <li>Order data</li>
-            <li>Any other contact detail</li>
-          </ul>
-        </div>
+  <!-- ==================== EN ==================== -->
+
+  <main data-content="en">
+
+```
+<section>
+  <h2>What is stored</h2>
+
+  <div class="body">
+    <div class="pair">
+
+      <div class="yes">
+        <h3>Recorded</h3>
+        <ul>
+          <li>Timestamp of the consent decision</li>
+          <li>Visitor region (country code)</li>
+          <li>Categories chosen — analytics, marketing, preferences</li>
+          <li>Applied consent model</li>
+          <li>Banner language</li>
+          <li>Policy version ID shown to the visitor</li>
+          <li>Consent identifier returned by Shopify's Customer Privacy API</li>
+          <li>Shop settings — policy URLs, and custom labels on the Pro plan</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <section>
-    <h2>Cookies and identifiers</h2>
-    <div class="body">
-      <p>LangKamel sets no tracking cookies of its own and generates no visitor-tracking identifiers of its own.</p>
-      <p>The consent identifier stored with each record is received from Shopify's Customer Privacy API. Its nature and behaviour are defined by Shopify; LangKamel neither generates nor controls it.</p>
-    </div>
-  </section>
+      <div class="no">
+        <h3>Never recorded</h3>
+        <ul>
+          <li>Customer names</li>
+          <li>Email addresses</li>
+          <li>Postal addresses</li>
+          <li>Order data</li>
+          <li>Any other contact detail</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2>Retention and erasure</h2>
-    <div class="body">
-      <p>Consent records are append-only. When the app is uninstalled from a store, Shopify's shop redaction webhook erases all of that store's records within the 48-hour window defined by Shopify's GDPR webhooks.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Hosting</h2>
-    <div class="body">
-      <p>Data is hosted on Neon Postgres in the EU region (Frankfurt, Germany).</p>
+
+<section>
+  <h2>Cookies and identifiers</h2>
+
+  <div class="body">
+    <p>
+      LangKamel sets no tracking cookies of its own and generates no
+      visitor-tracking identifiers of its own.
+    </p>
+
+    <p>
+      The consent identifier stored with each record is received from
+      Shopify's Customer Privacy API. Its nature and behaviour are defined
+      by Shopify; LangKamel neither generates nor controls it.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Retention and erasure</h2>
+
+  <div class="body">
+    <p>
+      Consent records are append-only. When the app is uninstalled from a
+      store, Shopify's shop redaction webhook erases all of that store's
+      records within the 48-hour window defined by Shopify's GDPR webhooks.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Hosting</h2>
+
+  <div class="body">
+    <p>
+      Data is hosted on Neon Postgres in the EU region
+      (Frankfurt, Germany).
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Integrity</h2>
+
+  <div class="body">
+    <p class="ceiling">
+      Consent records are append-only and protected from modification at
+      the application level. They are <strong>not tamper-proof</strong>,
+      and LangKamel makes no such claim.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Contact</h2>
+
+  <div class="body">
+    <p>
+      Questions about this page, or a request concerning data held for
+      your store:
+      <a href="mailto:support@langkamel.com">support@langkamel.com</a>.
+    </p>
+  </div>
+</section>
+```
+
+  </main>
+
+  <!-- ==================== DE ==================== -->
+
+  <main data-content="de" hidden>
+
+```
+<section>
+  <h2>Welche Daten gespeichert werden</h2>
+
+  <div class="body">
+    <div class="pair">
+
+      <div class="yes">
+        <h3>Erfasst</h3>
+        <ul>
+          <li>Zeitstempel der Einwilligungsentscheidung</li>
+          <li>Region des Besuchers (Ländercode)</li>
+          <li>Gewählte Kategorien — Analytics, Marketing, Präferenzen</li>
+          <li>Angewandtes Einwilligungsmodell</li>
+          <li>Sprache des Banners</li>
+          <li>Richtlinienversions-ID, die dem Besucher angezeigt wurde</li>
+          <li>Einwilligungs-ID, die von Shopifys Customer Privacy API zurückgegeben wird</li>
+          <li>Shop-Einstellungen — Richtlinien-URLs und eigene Beschriftungen im Pro-Tarif</li>
+        </ul>
+      </div>
+
+      <div class="no">
+        <h3>Nicht erfasst</h3>
+        <ul>
+          <li>Namen von Kunden</li>
+          <li>E-Mail-Adressen</li>
+          <li>Postanschriften</li>
+          <li>Bestelldaten</li>
+          <li>Andere Kontaktdaten</li>
+        </ul>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Integrity</h2>
-    <div class="body">
-      <p class="ceiling">Consent records are append-only and protected from modification at the application level. They are <strong>not tamper-proof</strong>, and LangKamel makes no such claim.</p>
-    </div>
-  </section>
 
-  <section>
-    <h2>Contact</h2>
-    <div class="body">
-      <p>Questions about this page, or a request concerning data held for your store: <a href="mailto:support@langkamel.com">support@langkamel.com</a>.</p>
-    </div>
-  </section>
+<section>
+  <h2>Cookies und Kennungen</h2>
 
-  <footer>
-    LangKamel is a cookie consent app for Shopify stores. This page describes the app's own data handling. It does not describe the data handling of any store that installs it — each merchant remains responsible for their own privacy notice.
+  <div class="body">
+    <p>
+      LangKamel setzt keine eigenen Tracking-Cookies und erzeugt keine
+      eigenen Kennungen zur Verfolgung von Besuchern.
+    </p>
+
+    <p>
+      Die mit jeder Aufzeichnung gespeicherte Einwilligungs-ID wird von
+      Shopifys Customer Privacy API bereitgestellt. Ihre Art und ihr
+      Verhalten werden von Shopify bestimmt; LangKamel erzeugt und
+      kontrolliert sie nicht.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Aufbewahrung und Löschung</h2>
+
+  <div class="body">
+    <p>
+      Einwilligungsdatensätze werden nur ergänzt und nicht nachträglich
+      verändert. Wird die App aus einem Shop deinstalliert, löscht Shopifys
+      Shop-Redaction-Webhook alle Datensätze dieses Shops innerhalb des von
+      Shopify für GDPR-Webhooks vorgesehenen Zeitfensters von 48 Stunden.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Hosting</h2>
+
+  <div class="body">
+    <p>
+      Die Daten werden auf Neon Postgres in der EU-Region
+      (Frankfurt, Deutschland) gehostet.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Integrität</h2>
+
+  <div class="body">
+    <p class="ceiling">
+      Einwilligungsdatensätze werden nur ergänzt und auf Anwendungsebene
+      vor nachträglichen Änderungen geschützt.
+      Sie sind <strong>nicht manipulationssicher</strong>; eine solche
+      Aussage macht LangKamel ausdrücklich nicht.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Kontakt</h2>
+
+  <div class="body">
+    <p>
+      Fragen zu dieser Seite oder Anfragen zu Daten, die für Ihren Shop
+      gespeichert sind:
+      <a href="mailto:support@langkamel.com">support@langkamel.com</a>.
+    </p>
+  </div>
+</section>
+```
+
+  </main>
+
+  <!-- ==================== EN FOOTER ==================== -->
+
+  <footer data-content="en">
+    LangKamel is a cookie consent app for Shopify stores. This page describes
+    the app's own data handling. It does not describe the data handling of any
+    store that installs it — each merchant remains responsible for their own
+    privacy notice.
+  </footer>
+
+  <!-- ==================== DE FOOTER ==================== -->
+
+  <footer data-content="de" hidden>
+    LangKamel ist eine Cookie-Consent-App für Shopify-Shops. Diese Seite
+    beschreibt die Datenverarbeitung der App selbst. Sie beschreibt nicht die
+    Datenverarbeitung eines Shops, in dem die App installiert ist — jeder
+    Händler bleibt für seine eigene Datenschutzerklärung verantwortlich.
   </footer>
 
 </div>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var requestedLang = params.get("lang");
+    var lang = requestedLang === "de" ? "de" : "en";
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-content]").forEach(function (element) {
+      element.hidden = element.getAttribute("data-content") !== lang;
+    });
+
+    document.querySelectorAll("[data-lang]").forEach(function (link) {
+      if (link.getAttribute("data-lang") === lang) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    var title = {
+      en: "Privacy & data handling — LangKamel",
+      de: "Datenschutz & Datenverarbeitung — LangKamel"
+    };
+
+    document.title = title[lang];
+  })();
+</script>
+
 </body>
 </html>
