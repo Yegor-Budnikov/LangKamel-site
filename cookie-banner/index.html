@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangKamel — GDPR Cookie Banner for Shopify</title>
+<meta name="description" content="A GDPR cookie banner in English and German, correct from install. Accept and Reject shown equally.">
+<style>
+  :root {
+    --ink: #17191c;
+    --ink-soft: #4b4f54;
+    --paper: #f3f1ec;
+    --paper-raised: #fbfaf7;
+    --line: #dad5cb;
+    --accent: #24463f;
+    --accent-soft: #e4ebe8;
+    --camel: #b98a55;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .back {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  .back:hover, .back:focus-visible { color: var(--accent); }
+
+  .kicker {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--camel);
+    margin: 0 0 1rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    line-height: 1.2;
+    margin: 0 0 0.9rem;
+  }
+
+  .subhead {
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    max-width: 42ch;
+    margin: 0 0 2.5rem;
+  }
+
+  figure {
+    margin: 2.5rem 0;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+
+  figcaption {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 0.6rem;
+  }
+
+  p.body-text {
+    margin: 0 0 1.4rem;
+    max-width: 58ch;
+  }
+
+  h2 {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 3rem 0 1rem;
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .features li {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+    padding-left: 1.3rem;
+    position: relative;
+  }
+
+  .features li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--camel);
+  }
+
+  .plans-teaser {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+
+  .plans-teaser p { margin: 0 0 0.75rem; color: var(--ink-soft); }
+  .plans-teaser a {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .plans-teaser a:hover, .plans-teaser a:focus-visible { text-decoration: underline; }
+
+  .closing {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    margin: 3rem 0 1rem;
+    max-width: 24ch;
+  }
+
+  .cta-note {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    border: 1px dashed var(--line);
+    border-radius: 4px;
+    padding: 0.9rem 1rem;
+    margin: 0 0 3rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  footer a { color: var(--accent); }
+  footer p { margin: 0.4rem 0; }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← LangKamel</a>
+
+    <p class="kicker">Shopify app</p>
+    <h1>LangKamel GDPR Cookie Banner</h1>
+    <p class="subhead">A GDPR cookie banner in English and German, correct from install. Accept and Reject shown equally.</p>
+
+    <figure>
+      <img src="listing_1_banner_de_collapsed.png" alt="German consent banner with equal Accept, Reject, Settings">
+      <figcaption>Accept, Reject, and Preferences — equal prominence, first layer.</figcaption>
+    </figure>
+
+    <p class="body-text">LangKamel gives your Shopify store a GDPR cookie consent banner that's correct from the first install. Accept, Reject, and Preferences appear with equal prominence: no pre-ticked boxes, no reject button buried on a second screen. A German court ruled in 2025 that a banner offering only "Accept" and "Settings" on the first layer makes consent invalid — LangKamel puts an equally prominent Reject on the first layer by default, on the free plan, from minute one.</p>
+
+    <p class="body-text">Every consent decision is recorded with a timestamp and the exact policy text the visitor saw, and you can export the full trail as a CSV whenever you need to show it. Google Consent Mode v2 signalling and Shopify's Customer Privacy API are wired in, so your Shopify-native pixels receive each visitor's choice. Legal-basis text in English and German is included and maintained for you.</p>
+
+    <figure>
+      <img src="listing_2_banner_en_preferences.png" alt="Cookie preferences: optional categories off, none pre-ticked">
+      <figcaption>Granular categories, nothing pre-selected.</figcaption>
+    </figure>
+
+    <p class="body-text">You don't have to lose analytics to compliance. In the EU, UK, and EEA, every visitor sees the consent banner. Everywhere else, Basic counts visitors as consented by default — recovering the data you lose when every region has to click Accept first. It's an optimisation, not a shortcut: consent stays opt-in wherever it's legally required.</p>
+
+    <p class="body-text">On Pro, make the banner yours — set your own Accept, Reject, and Preferences text in English and German to match your store's voice.</p>
+
+    <h2>What you get</h2>
+    <ul class="features">
+      <li>Equal-prominence Accept, Reject, and Preferences — no hidden reject, on by default</li>
+      <li>Every consent decision logged with a timestamp and exportable as a CSV audit trail</li>
+      <li>Google Consent Mode v2 and Shopify Customer Privacy — your native pixels get each visitor's choice</li>
+      <li>English and German banner with legal-basis text, maintained for you</li>
+      <li>Basic: outside the EU, UK, and EEA, count visitors as consented by default and recover lost analytics — inside, everyone sees the banner</li>
+      <li>Pro: customise your banner's button labels in English and German</li>
+    </ul>
+
+    <figure>
+      <img src="listing_3_settings_free.png" alt="App settings: consent audit available, opt-in and banner locked">
+      <figcaption>See what's active, export the audit trail, and upgrade when you're ready.</figcaption>
+    </figure>
+
+    <div class="plans-teaser">
+      <p>Free plan is fully usable, no trial and no expiry. Basic and Pro add optimisation and appearance on top.</p>
+      <a href="/cookie-banner/plans/">See Free, Basic, and Pro →</a>
+    </div>
+
+    <p class="closing">Install free, be correct today, and upgrade only when you want more.</p>
+
+    <p class="cta-note">[Install button goes here once the Shopify App Store listing is live — do not link this until the real listing URL exists.]</p>
+
+    <footer>
+      <p><a href="/cookie-banner/privacy/">Privacy policy</a></p>
+      <p>Questions? <a href="mailto:support@langkamel.com">support@langkamel.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
