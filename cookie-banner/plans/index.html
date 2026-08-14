@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangKamel — Plans</title>
+<style>
+  :root {
+    --ink: #17191c;
+    --ink-soft: #4b4f54;
+    --paper: #f3f1ec;
+    --paper-raised: #fbfaf7;
+    --line: #dad5cb;
+    --accent: #24463f;
+    --accent-soft: #e4ebe8;
+    --camel: #b98a55;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  header {
+    margin-bottom: 3.5rem;
+  }
+
+  .brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin: 0 0 1.75rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    color: var(--ink);
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  .ledger {
+    border-top: 1px solid var(--ink);
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 0.5rem 1.5rem;
+    padding: 2rem 0 0.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .row:last-child { border-bottom: 1px solid var(--ink); }
+
+  .tier-name {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--camel);
+    grid-column: 1 / -1;
+  }
+
+  .tier-price {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 1.4rem;
+    font-variant-numeric: tabular-nums;
+    grid-column: 1 / 2;
+  }
+
+  .tier-terms {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    grid-column: 2 / 3;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .tier-desc {
+    grid-column: 1 / -1;
+    margin: 0.9rem 0 1.6rem;
+    color: var(--ink);
+    max-width: 58ch;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: var(--accent);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 520px) {
+    .row { padding-top: 1.5rem; }
+    .tier-price { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="brand">LangKamel</p>
+      <h1>Plans</h1>
+      <p class="lede">Every plan is correct from install. Paid tiers add optimisation and appearance — never more compliance than Free already gives you.</p>
+    </header>
+
+    <div class="ledger">
+
+      <div class="row">
+        <span class="tier-name">Free</span>
+        <span class="tier-price">$0</span>
+        <span class="tier-terms">forever</span>
+        <p class="tier-desc">Everything you need for correct cookie consent from day one: a GDPR consent banner with equal-prominence Accept, Reject, and Preferences, consent logging with CSV audit export, Google Consent Mode v2, Shopify Customer Privacy sync, and English + German legal-basis text. No trial, no expiry.</p>
+      </div>
+
+      <div class="row">
+        <span class="tier-name">Basic</span>
+        <span class="tier-price">$9.99<span style="font-size:0.95rem;color:var(--ink-soft);">/mo</span></span>
+        <span class="tier-terms">7-day free trial</span>
+        <p class="tier-desc">Everything in Free, plus consent-conversion optimisation: in the EU, UK, and EEA every visitor sees the banner; everywhere else, visitors are counted as consented by default, recovering the analytics you lose when every region has to click Accept first.</p>
+      </div>
+
+      <div class="row">
+        <span class="tier-name">Pro</span>
+        <span class="tier-price">$24.99<span style="font-size:0.95rem;color:var(--ink-soft);">/mo</span></span>
+        <span class="tier-terms">7-day free trial</span>
+        <p class="tier-desc">Everything in Basic, plus banner customisation: set your own Accept, Reject, and Preferences button text in English and German to match your store's voice.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>See the <a href="https://langkamel.com/cookie-banner/privacy/">privacy policy</a> for what LangKamel records and how it's handled.</p>
+    </footer>
+  </div>
+</body>
+</html>
