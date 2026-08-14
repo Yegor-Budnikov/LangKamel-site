@@ -278,5 +278,16 @@
       <p>Questions? <a href="mailto:support@langkamel.com">support@langkamel.com</a></p>
     </footer>
   </div>
+  <script>
+    document.querySelector('.video-thumb')?.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = this.getAttribute('data-embed');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.allow = 'autoplay; encrypted-media; fullscreen';
+      f.allowFullscreen = true;
+      this.replaceWith(f);
+    });
+  </script>
 </body>
 </html>
