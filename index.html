@@ -1,52 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to LangKamel</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
-            text-align: center;
-        }
-        h1 {
-            color: #111;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-        }
-        .links {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangKamel</title>
+<meta name="description" content="LangKamel builds small, correct tools for Shopify merchants.">
+<style>
+  :root {
+    --ink: #17191c;
+    --ink-soft: #4b4f54;
+    --paper: #f3f1ec;
+    --paper-raised: #fbfaf7;
+    --line: #dad5cb;
+    --accent: #24463f;
+    --accent-soft: #e4ebe8;
+    --camel: #b98a55;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  header { margin-bottom: 3rem; }
+
+  .brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin: 0 0 1.75rem;
+  }
+
+  .kicker {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--camel);
+    margin: 0 0 1rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2.1rem, 5.5vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1.1rem;
+    max-width: 16ch;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 1.08rem;
+    max-width: 48ch;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 0.5rem;
+  }
+
+  .ledger {
+    border-top: 1px solid var(--ink);
+    margin-top: 3rem;
+  }
+
+  .row {
+    display: block;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .row:last-child { border-bottom: 1px solid var(--ink); }
+
+  a.row {
+    transition: background 0.15s ease;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 3px;
+  }
+
+  a.row:hover,
+  a.row:focus-visible {
+    background: var(--accent-soft);
+  }
+
+  .row-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .product-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+  }
+
+  .status {
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .status.live { color: var(--accent); }
+  .status.soon { color: var(--ink-soft); }
+
+  .product-desc {
+    color: var(--ink-soft);
+    margin: 0.5rem 0 0;
+    max-width: 54ch;
+  }
+
+  .row.muted {
+    color: var(--ink-soft);
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  footer a { color: var(--accent); }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 520px) {
+    .row-head { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  }
+</style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <p class="brand">LangKamel</p>
+      <p class="kicker">Shopify tools</p>
+      <h1>Small, correct tools for Shopify merchants.</h1>
+      <p class="lede">Each LangKamel app does one job, and does it the way the people who check it actually check it. We'd rather ship one thing well than promise everything.</p>
+    </header>
 
-    <h1>Welcome to LangKamel</h1>
-    <p>This is the official website for our projects and applications.</p>
+    <section>
+      <h2>Products</h2>
+      <div class="ledger">
+        <a class="row" href="/cookie-banner/">
+          <div class="row-head">
+            <span class="product-name">Cookie Banner</span>
+            <span class="status live">Live</span>
+          </div>
+          <p class="product-desc">A GDPR cookie consent banner for Shopify: equal-prominence Accept, Reject, and Preferences, a consent audit trail, and legal-basis text in English and German.</p>
+        </a>
+        <div class="row muted">— more apps in the works —</div>
+      </div>
+    </section>
 
-    <div class="links">
-        <p>Looking for legal information?</p>
-        <!-- Эта ссылка ведет в папку appname/privacy/ к файлу index.html политики -->
-        <a href="cookie-banner/privacy/">Read LangKamel GDPR Cookie Banner Privacy Policy</a>
-    </div>
-
+    <footer>
+      <p>Questions? <a href="mailto:support@langkamel.com">support@langkamel.com</a></p>
+    </footer>
+  </div>
 </body>
 </html>
