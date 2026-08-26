@@ -36,7 +36,7 @@
   }
   .back:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 
-  header{border-bottom:2px solid var(--ink);padding-bottom:1.75rem;margin-bottom:2.25rem}
+  header{border-bottom:2px solid var(--ink);padding-bottom:1.75rem;margin-bottom:0}
   .brand{
     font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
     font-size:1.05rem;letter-spacing:.02em;margin:0 0 1.5rem;color:var(--accent);
@@ -54,37 +54,43 @@
     color:var(--ink-soft);margin:1.5rem 0 0;
   }
 
-  .watch{margin:0 0 2.75rem}
+  .watch{margin:0 0 2rem}
+  .watch-kicker{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-soft);margin:0 0 .75rem;
+  }
   .frame{
     position:relative;width:100%;aspect-ratio:16/9;
-    background:var(--accent);overflow:hidden;
+    background:var(--paper-raised);overflow:hidden;
   }
   .frame iframe{
     position:absolute;inset:0;width:100%;height:100%;border:0;
   }
   .poster{
     position:absolute;inset:0;width:100%;height:100%;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;
-    margin:0;padding:0;border:0;cursor:pointer;
-    background:var(--accent);color:var(--paper-raised);
-    font:inherit;
+    display:block;margin:0;padding:0;border:0;cursor:pointer;
+    background:transparent;font:inherit;
   }
-  .poster:hover .play{transform:scale(1.06)}
-  .poster:focus-visible{outline:2px solid var(--camel);outline-offset:-4px}
+  .poster img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;display:block;
+  }
+  .poster:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+  .poster:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   .play{
-    display:block;width:4.25rem;height:4.25rem;border-radius:50%;
-    background:var(--paper-raised);
+    position:absolute;left:50%;top:50%;
+    width:4.75rem;height:4.75rem;border-radius:50%;
+    background:#fff;
+    transform:translate(-50%,-50%);
     transition:transform .15s ease;
+    box-shadow:0 2px 16px rgba(23,25,28,.12);
   }
   .play::after{
     content:"";display:block;width:0;height:0;
-    border-style:solid;border-width:.7rem 0 .7rem 1.15rem;
+    border-style:solid;border-width:.78rem 0 .78rem 1.28rem;
     border-color:transparent transparent transparent var(--accent);
-    margin:1.42rem 0 0 1.65rem;
-  }
-  .poster-label{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    margin:1.58rem 0 0 1.85rem;
   }
   .watch-link{
     font-size:.9rem;margin:.7rem 0 0;color:var(--ink-soft);
@@ -94,7 +100,7 @@
     display:grid;grid-template-columns:12rem 1fr;gap:2.5rem;
     padding:2.75rem 0;border-top:1px solid var(--rule);
   }
-  section:first-of-type{padding-top:0}
+  section:first-of-type{border-top:none}
 
   .stamp{margin:0}
   .version{
@@ -177,16 +183,6 @@
     <p class="updated">Current version 1.0.1 &middot; 27 August 2026</p>
   </header>
 
-  <div class="watch">
-    <div class="frame">
-      <button type="button" class="poster" data-youtube="38PoEeY1TMA" aria-label="Play 1.0.1 update video">
-        <span class="play" aria-hidden="true"></span>
-        <span class="poster-label">1.0.1 update</span>
-      </button>
-    </div>
-    <p class="watch-link"><a href="https://youtu.be/38PoEeY1TMA">Watch on YouTube</a> &mdash; YouTube loads only when you press play.</p>
-  </div>
-
   <section>
     <div class="stamp">
       <p class="version">1.0.1</p>
@@ -194,6 +190,17 @@
     </div>
 
     <div class="entries">
+
+      <div class="watch">
+        <p class="watch-kicker">Watch it work</p>
+        <div class="frame">
+          <button type="button" class="poster" data-youtube="38PoEeY1TMA" aria-label="Play 1.0.1 update video">
+            <img src="youtube_thumbnail_1_0_1_update.png" alt="" width="1280" height="720">
+            <span class="play" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="watch-link"><a href="https://youtu.be/38PoEeY1TMA">Watch on YouTube</a> &mdash; YouTube loads only when you press play.</p>
+      </div>
 
       <div class="entry">
         <p class="kind">Fixed</p>
