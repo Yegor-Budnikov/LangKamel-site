@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change log — LangKamel GDPR Cookie Banner</title>
+<meta name="description" content="Released versions of the LangKamel GDPR Cookie Banner app for Shopify: what changed in each version, and how to confirm the change on your own store.">
+<style>
+  :root{
+    --ink:#17191C;
+    --ink-soft:#4B4F54;
+    --paper:#F3F1EC;
+    --paper-raised:#FBFAF7;
+    --rule:#DAD5CB;
+    --accent:#24463F;
+    --camel:#B98A55;
+    --measure:36rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  .wrap{max-width:52rem;margin:0 auto;padding:3.5rem 1.5rem 6rem}
+
+  .back{
+    display:inline-block;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-soft);text-decoration:none;margin:0 0 2rem;
+  }
+  .back:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+  header{border-bottom:2px solid var(--ink);padding-bottom:1.75rem;margin-bottom:3rem}
+  .brand{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-size:1.05rem;letter-spacing:.02em;margin:0 0 1.5rem;color:var(--accent);
+  }
+  .brand span{color:var(--camel)}
+  h1{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-weight:400;font-size:clamp(2rem,5vw,2.9rem);line-height:1.12;
+    margin:0 0 .75rem;letter-spacing:-.01em;
+  }
+  .lede{max-width:var(--measure);color:var(--ink-soft);margin:0}
+  .updated{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-soft);margin:1.5rem 0 0;
+  }
+
+  section{
+    display:grid;grid-template-columns:12rem 1fr;gap:2.5rem;
+    padding:2.75rem 0;border-top:1px solid var(--rule);
+  }
+  section:first-of-type{border-top:none;padding-top:0}
+
+  .stamp{margin:0}
+  .version{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:1.15rem;font-variant-numeric:tabular-nums;
+    margin:0;color:var(--ink);
+  }
+  .released{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-soft);margin:.45rem 0 0;
+  }
+
+  .entries{max-width:var(--measure)}
+  .entry{padding:0 0 2rem}
+  .entry:last-child{padding-bottom:0}
+  .kind{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--camel);margin:0 0 .5rem;
+  }
+  .entry h3{
+    font-size:1.02rem;font-weight:600;line-height:1.4;
+    margin:0 0 .6rem;
+  }
+  .entry p{margin:0 0 .9rem}
+  .entry p:last-child{margin-bottom:0}
+  .verify{
+    background:var(--paper-raised);border-left:3px solid var(--camel);
+    padding:.9rem 1.1rem;margin:.9rem 0 0;font-size:.94rem;
+  }
+  .verify b{
+    display:block;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-soft);margin:0 0 .35rem;
+  }
+  a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  footer{
+    margin-top:3.5rem;padding-top:1.75rem;border-top:1px solid var(--rule);
+    font-size:.9rem;color:var(--ink-soft);max-width:var(--measure);
+  }
+  footer p{margin:0 0 .7rem}
+  footer p:last-child{margin-bottom:0}
+
+  @media (max-width:700px){
+    section{grid-template-columns:1fr;gap:1rem;padding:2.25rem 0}
+    .wrap{padding-top:2.5rem}
+    .released{margin-top:.25rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="https://langkamel.com/cookie-banner/">&larr; LangKamel GDPR Cookie Banner</a>
+
+  <header>
+    <p class="brand">Lang<span>Kamel</span> &mdash; GDPR Cookie Banner for Shopify</p>
+    <h1>Change log</h1>
+    <p class="lede">What changed in each released version of the LangKamel app, and how to confirm the change on your own store.</p>
+    <p class="updated">Current version 1.0.1 &middot; 27 August 2026</p>
+  </header>
+
+  <section>
+    <div class="stamp">
+      <p class="version">1.0.1</p>
+      <p class="released">27 August 2026</p>
+    </div>
+
+    <div class="entries">
+
+      <div class="entry">
+        <p class="kind">Fixed</p>
+        <h3>A paid feature could stay locked after the subscription was approved</h3>
+        <p>After approving a Basic or Pro subscription, the feature that plan unlocks could keep showing as Locked, as though the store were still on Free. The app's entitlement check was excluding the very subscription that had just been approved, so the app read the store as unsubscribed while Shopify had it as active.</p>
+        <p>Entitlement checks now count every active subscription on the store. A plan takes effect as soon as Shopify confirms it, on the first page load after approval.</p>
+        <div class="verify">
+          <b>How to confirm</b>
+          Upgrade to Basic from the app's settings page and approve the charge. On return, the Opt-in optimisation card reads Active &mdash; no reload, no waiting period. Downgrading and re-upgrading returns the card to Locked and back to Active in step with the subscription.
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="kind">Fixed</p>
+        <h3>The subscription approval screen could open blank on the first click</h3>
+        <p>The app's server was allowed to sleep while idle. A first click after an idle period had to wait for that server to start, and could time out before Shopify's approval screen was reached &mdash; which showed as a blank frame rather than an error. A second click usually worked, because the first one had woken the server.</p>
+        <p>One server instance now stays running continuously, so there is no start-up delay to land in and the approval screen is reached on the first click.</p>
+        <div class="verify">
+          <b>How to confirm</b>
+          Leave the app untouched for several minutes, then click an upgrade button. Shopify's subscription approval screen appears on the first click, with no blank frame.
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="kind">Fixed</p>
+        <h3>Opt-in status could read Inactive for one page load after an upgrade</h3>
+        <p>Immediately after an upgrade, the Opt-in optimisation card could report Inactive for a single page load and correct itself on the next one. The card was reading its status before the newly approved plan had been recorded. It now reads it afterwards, and is correct on the first render.</p>
+        <div class="verify">
+          <b>How to confirm</b>
+          Approve an upgrade to Basic and read the Opt-in optimisation card on the page you land on, without reloading. It reads Active.
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="kind">Unchanged</p>
+        <h3>No change to consent behaviour, stored data, or plans</h3>
+        <p>This version touches only how the app recognises an approved subscription and how quickly it starts. The consent banner, the categories offered, the consent records written, the CSV audit export, and what each plan includes are all unchanged. Nothing about this release alters what is stored about a visitor &mdash; see the <a href="https://langkamel.com/cookie-banner/privacy/">privacy page</a>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>This log covers changes to the LangKamel app for Shopify. It does not cover changes to this website.</p>
+    <p>See the <a href="https://langkamel.com/cookie-banner/plans/">plans</a> for what each tier includes, or the <a href="https://langkamel.com/cookie-banner/privacy/">privacy page</a> for what the app records. Questions: <a href="mailto:support@langkamel.com">support@langkamel.com</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
