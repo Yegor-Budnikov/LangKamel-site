@@ -137,10 +137,11 @@
         <p class="kind">Fixed</p>
         <h3>A paid feature could stay locked after the subscription was approved</h3>
         <p>After approving a Basic or Pro subscription, the feature that plan unlocks could keep showing as Locked, as though the store were still on Free. The app's entitlement check was excluding the very subscription that had just been approved, so the app read the store as unsubscribed while Shopify had it as active.</p>
-        <p>Entitlement checks now count every active subscription on the store. A plan takes effect as soon as Shopify confirms it, on the first page load after approval.</p>
+        <p>A second fault on the same screen produced the same symptom for a shorter time: a card could report its previous state for one page load even once the plan had been recognised, because it read that state before the new plan was applied.</p>
+        <p>Both are fixed. Entitlement checks now count every active subscription on the store, and each card reads its state after the plan is applied &mdash; so a paid plan takes effect, and shows correctly, on the first page load after approval.</p>
         <div class="verify">
           <b>How to confirm</b>
-          Upgrade to Basic from the app's settings page and approve the charge. On return, the Opt-in optimisation card reads Active &mdash; no reload, no waiting period. Downgrading and re-upgrading returns the card to Locked and back to Active in step with the subscription.
+          Upgrade from the app's settings page and approve the charge. On Basic, the <i>Opt-in optimization</i> card moves from Locked to Active; on Pro, <i>Banner customization</i> moves from Locked to Available. Neither needs a reload or a waiting period. Changing tier in either direction, a downgrade included, tracks the subscription: each card locks and unlocks in step with the plan that grants it.
         </div>
       </div>
 
@@ -155,28 +156,13 @@
         </div>
       </div>
 
-      <div class="entry">
-        <p class="kind">Fixed</p>
-        <h3>Opt-in status could read Inactive for one page load after an upgrade</h3>
-        <p>Immediately after an upgrade, the Opt-in optimisation card could report Inactive for a single page load and correct itself on the next one. The card was reading its status before the newly approved plan had been recorded. It now reads it afterwards, and is correct on the first render.</p>
-        <div class="verify">
-          <b>How to confirm</b>
-          Approve an upgrade to Basic and read the Opt-in optimisation card on the page you land on, without reloading. It reads Active.
-        </div>
-      </div>
-
-      <div class="entry">
-        <p class="kind">Unchanged</p>
-        <h3>No change to consent behaviour, stored data, or plans</h3>
-        <p>This version touches only how the app recognises an approved subscription and how quickly it starts. The consent banner, the categories offered, the consent records written, the CSV audit export, and what each plan includes are all unchanged. Nothing about this release alters what is stored about a visitor &mdash; see the <a href="https://langkamel.com/cookie-banner/privacy/">privacy page</a>.</p>
-      </div>
-
     </div>
   </section>
 
   <footer>
     <p>This log covers changes to the LangKamel app for Shopify. It does not cover changes to this website.</p>
-    <p>See the <a href="https://langkamel.com/cookie-banner/plans/">plans</a> for what each tier includes, or the <a href="https://langkamel.com/cookie-banner/privacy/">privacy page</a> for what the app records. Questions: <a href="mailto:support@langkamel.com">support@langkamel.com</a>.</p>
+    <p>Version 1.0.1 changed only how an approved subscription is recognised and how quickly the app starts. The consent banner, the categories offered, the records written, and the CSV audit export are unaffected, and nothing about it alters what is stored about a visitor &mdash; see the <a href="https://langkamel.com/cookie-banner/privacy/">privacy page</a>.</p>
+    <p>See the <a href="https://langkamel.com/cookie-banner/plans/">plans</a> for what each tier includes. Questions: <a href="mailto:support@langkamel.com">support@langkamel.com</a>.</p>
   </footer>
 
 </div>
