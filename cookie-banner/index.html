@@ -147,13 +147,28 @@
     max-width: 24ch;
   }
 
+  .cta {
+    margin: 0 0 0.7rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--paper-raised);
+    text-decoration: none;
+    font-family: ui-monospace, "SF Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1.35rem;
+    border-radius: 4px;
+  }
+  .cta-btn:hover,
+  .cta-btn:focus-visible {
+    background: #1b3530;
+  }
   .cta-note {
     font-family: ui-monospace, "SF Mono", "Courier New", monospace;
     font-size: 0.8rem;
     color: var(--ink-soft);
-    border: 1px dashed var(--line);
-    border-radius: 4px;
-    padding: 0.9rem 1rem;
     margin: 0 0 3rem;
   }
 
@@ -271,7 +286,10 @@
     
     <p class="closing">Install free, be correct today, and upgrade only when you want more.</p>
 
-    <p class="cta-note">[Install button goes here once the Shopify App Store listing is live — do not link this until the real listing URL exists.]</p>
+    <p class="cta">
+      <a class="cta-btn" href="https://apps.shopify.com/gdpr-cookie-consent-2">Install on Shopify</a>
+    </p>
+    <p class="cta-note">Free plan available. Opens the Shopify App Store.</p>
 
     <footer>
       <p><a href="/cookie-banner/privacy/">Privacy policy</a></p>
