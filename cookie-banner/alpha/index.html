@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Alpha — LangKamel GDPR Cookie Banner</title>
+  <meta
+    name="description"
+    content="Private alpha guide: create a Shopify store, try LangKamel, send feedback, and — only if you want — leave an honest App Store review."
+  >
+
+  <style>
+    :root{
+      --ink:#14171C;
+      --ink-soft:#4A525C;
+      --paper:#FBFAF7;
+      --rule:#DFD9CF;
+      --sand:#B5834E;
+      --panel:#F3EFE8;
+      --measure:34rem;
+    }
+
+    *{box-sizing:border-box}
+
+    html{-webkit-text-size-adjust:100%}
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size:17px;
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:52rem;
+      margin:0 auto;
+      padding:3.5rem 1.5rem 6rem;
+    }
+
+    header{
+      border-bottom:2px solid var(--ink);
+      padding-bottom:1.75rem;
+      margin-bottom:3rem;
+    }
+
+    .topline{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1.5rem;
+      margin-bottom:1.5rem;
+    }
+
+    .brand{
+      font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+      font-size:1.05rem;
+      letter-spacing:.02em;
+      margin:0;
+    }
+
+    .brand span{color:var(--sand)}
+
+    .language-switch{
+      display:flex;
+      align-items:center;
+      gap:.2rem;
+      flex-shrink:0;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      padding:.15rem;
+      background:var(--paper);
+    }
+
+    .language-switch a{
+      display:block;
+      padding:.28rem .65rem;
+      border-radius:999px;
+      color:var(--ink-soft);
+      text-decoration:none;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.7rem;
+      font-weight:600;
+      letter-spacing:.05em;
+    }
+
+    .language-switch a:hover{
+      color:var(--ink);
+    }
+
+    .language-switch a[aria-current="page"]{
+      background:var(--ink);
+      color:var(--paper);
+    }
+
+    h1{
+      font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+      font-weight:400;
+      font-size:clamp(2rem,5vw,2.9rem);
+      line-height:1.12;
+      margin:0 0 .75rem;
+      letter-spacing:-.01em;
+    }
+
+    .lede{
+      max-width:var(--measure);
+      color:var(--ink-soft);
+      margin:0;
+    }
+
+    .updated{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.78rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      margin:1.5rem 0 0;
+    }
+
+    section{
+      display:grid;
+      grid-template-columns:12rem 1fr;
+      gap:2.5rem;
+      padding:2.25rem 0;
+      border-top:1px solid var(--rule);
+    }
+
+    section:first-of-type{
+      border-top:none;
+      padding-top:0;
+    }
+
+    h2{
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin:.2rem 0 0;
+      color:var(--ink-soft);
+    }
+
+    .body{
+      max-width:var(--measure);
+    }
+
+    .body p{
+      margin:0 0 1rem;
+    }
+
+    .body p:last-child{
+      margin-bottom:0;
+    }
+
+    .body ol,
+    .body ul{
+      margin:0 0 1rem;
+      padding:0 0 0 1.2rem;
+    }
+
+    .body ol:last-child,
+    .body ul:last-child{
+      margin-bottom:0;
+    }
+
+    .body li{
+      margin:0 0 .55rem;
+    }
+
+    .body li:last-child{
+      margin-bottom:0;
+    }
+
+    .ceiling{
+      background:var(--panel);
+      border-left:3px solid var(--sand);
+      padding:1.1rem 1.25rem;
+      margin:0 0 1rem;
+      max-width:var(--measure);
+    }
+
+    .ceiling:last-child{
+      margin-bottom:0;
+    }
+
+    .ceiling strong{
+      font-weight:600;
+    }
+
+    a{
+      color:var(--ink);
+      text-decoration-thickness:1px;
+      text-underline-offset:3px;
+    }
+
+    a:focus-visible{
+      outline:2px solid var(--sand);
+      outline-offset:3px;
+      border-radius:2px;
+    }
+
+    .language-switch a:focus-visible{
+      outline-offset:2px;
+    }
+
+    footer{
+      margin-top:3.5rem;
+      padding-top:1.75rem;
+      border-top:1px solid var(--rule);
+      font-size:.9rem;
+      color:var(--ink-soft);
+      max-width:var(--measure);
+    }
+
+    footer p{
+      margin:0 0 .7rem;
+    }
+
+    footer p:last-child{
+      margin-bottom:0;
+    }
+
+    @media (max-width:700px){
+      .topline{
+        align-items:center;
+      }
+
+      section{
+        grid-template-columns:1fr;
+        gap:.85rem;
+        padding:1.9rem 0;
+      }
+
+      .wrap{
+        padding-top:2.5rem;
+      }
+    }
+
+    @media (max-width:430px){
+      .topline{
+        gap:1rem;
+      }
+
+      .brand{
+        font-size:1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="topline">
+      <p class="brand">Lang<span>Kamel</span> — GDPR Cookie Banner for Shopify</p>
+
+      <nav class="language-switch" aria-label="Language">
+        <a href="?lang=en" data-lang="en">EN</a>
+        <a href="?lang=ru" data-lang="ru">RU</a>
+      </nav>
+    </div>
+
+    <!-- EN -->
+    <div data-content="en">
+      <h1>Private alpha</h1>
+      <p class="lede">
+        This page is for people I asked personally. It is not linked from the
+        public site. You do not need any Shopify experience.
+      </p>
+      <p class="updated">Updated 1 September 2026</p>
+    </div>
+
+    <!-- RU -->
+    <div data-content="ru" hidden>
+      <h1>Закрытая альфа</h1>
+      <p class="lede">
+        Эта страница только для тех, кого я попросил лично. С публичного сайта
+        на неё нет ссылок. Опыт работы с Shopify не нужен.
+      </p>
+      <p class="updated">Обновлено 1 сентября 2026</p>
+    </div>
+  </header>
+
+  <!-- ==================== EN ==================== -->
+
+  <main data-content="en">
+
+    <section>
+      <h2>What I am asking</h2>
+      <div class="body">
+        <p>Two separate things. The first matters more.</p>
+        <ol>
+          <li><strong>Try it and tell me the truth.</strong> Where you got stuck, what was confusing, what felt unfinished. That is how the app gets polished before it goes public.</li>
+          <li><strong>A review is optional, later, and honest.</strong> Only if you actually used the app. Not the same afternoon you installed it. Not a five-star script. Shopify publishes how long you used the app next to the review, and they remove reviews that look fake or paid-for.</li>
+        </ol>
+        <p>If you come away thinking “I could actually open a shop on this,” that is a win too. No obligation to become a merchant.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reviews — the rules</h2>
+      <div class="body">
+        <p class="ceiling">
+          Shopify will take down fake, copy-pasted, incentivized, or same-day
+          “I installed it for 4 minutes” reviews — and they can unpublish the
+          app if a listing looks farmed. I cannot offer you anything in exchange
+          for a review: not money, not a meal, not a discount, not a favour.
+          I also cannot ask you for a positive review. If you write one, it has
+          to be your own words about what you actually did.
+        </p>
+        <ul>
+          <li>Use the app across a few days before you even consider reviewing. Open the storefront more than once. Click Accept, Reject, and Preferences. Export the consent CSV. Come back tomorrow. The listing shows <strong>time using the app</strong>; minutes look like a fake review to other merchants and to Shopify.</li>
+          <li>Write only what is true for you. Three stars is fine. “I got lost in the theme editor” is useful. Do not paste a text I sent you.</li>
+          <li>Do not review from a second account, and do not review an app you did not install.</li>
+          <li>You can leave a review only while the app is installed, or within 45 days after you uninstall it.</li>
+          <li>A submitted review may not appear immediately. Shopify checks it against their trust rules first. That is normal — do not submit it again.</li>
+        </ul>
+        <p>
+          Shopify’s own pages, if you want them:
+          <a href="https://help.shopify.com/en/manual/apps/finding-choosing-apps#app-reviews">how merchants review apps</a>
+          and
+          <a href="https://help.shopify.com/en/partners/help-support/faq/reviews#shopify-s-review-policies">review policies</a>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>1. Create a store</h2>
+      <div class="body">
+        <p>Pick one path. You do not need both.</p>
+        <p><strong>Path A — recommended if you are only testing</strong> (free, does not expire, no Shopify subscription):</p>
+        <ol>
+          <li>Create a free Shopify Partner account at <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Use your real name and a real email.</li>
+          <li>Open <strong>Stores</strong> and create a <strong>development store</strong> for testing and building — not a “client transfer” store. Give it a name you like; that name becomes the <code>something.myshopify.com</code> address and cannot be changed.</li>
+          <li>Choose a country. Germany is a good fit for this app; your own country is fine too.</li>
+        </ol>
+        <p><strong>Path B — if you might actually start a shop:</strong> open a regular Shopify store from <a href="https://www.shopify.com">shopify.com</a>. Trials are short and then Shopify charges for the platform. Only use this path if you are curious about becoming a merchant, not as a favour to me.</p>
+        <p>If Partner signup refuses you, use path B and tell me. Do not create a second account to work around it.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Make it feel like a shop</h2>
+      <div class="body">
+        <p>An empty admin is the fastest way to bounce. Ten minutes here makes the rest of Shopify click.</p>
+        <ol>
+          <li>Add one product: <strong>Products → Add product</strong>. A title, a price, and a photo from your camera roll is enough. Save.</li>
+          <li>Open <strong>Online Store</strong>. A theme (usually Dawn) is already there. You do not need to buy one.</li>
+          <li>Click <strong>View store</strong> at least once so you see the password page. Development stores keep a password gate on the public site — that is normal, not a bug. The password is under Online Store → Preferences. From admin, <strong>View store</strong> lets you in.</li>
+        </ol>
+        <p>Optional and fun: give the shop a name and a product that could be real. That is the bit that makes people want to try Shopify for themselves.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Install the app</h2>
+      <div class="body">
+        <ol>
+          <li>While you are logged into that store, open <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel on the Shopify App Store</a>.</li>
+          <li>Install it. Approve the permissions screen. The app asks for very little on purpose.</li>
+          <li>Stay on the <strong>Free</strong> plan. You do not need to pay me, and a development store often cannot complete a live paid charge anyway. If Shopify shows a paid-plan approval screen, close it and stay on Free.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Turn the banner on</h2>
+      <div class="body">
+        <p>Installing the app is not enough. The banner is off until you enable it on the theme. The app’s home screen will offer <strong>Enable app embed</strong> — use that button.</p>
+        <ol>
+          <li>The theme editor opens with the banner already switched on. Press <strong>Save</strong>. If you leave without saving, the live store still has no banner. That trips almost everyone once.</li>
+          <li>Back in the app, click <strong>Open storefront</strong>. You should see Accept, Reject, and Preferences with equal weight — Reject is not hidden behind Settings.</li>
+          <li>If the banner is missing: you probably did not Save, or you are looking at a page that still has the store password in front of it. From admin use View store, then Save again in the theme editor (Online Store → Customize → App embeds, or the Enable button in the app).</li>
+        </ol>
+        <p>Chrome is the least painful browser for this. Safari likes to warn about third-party cookies inside the theme editor; ignore those warnings.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Actually use it</h2>
+      <div class="body">
+        <p>Do this over a couple of days, not in one sitting. That is also what makes a later review look like a real merchant’s review.</p>
+        <ul>
+          <li>Click <strong>Reject</strong>. Reload. The banner should stay gone for that browser.</li>
+          <li>Open the store in a private window and try <strong>Preferences</strong>: leave the optional categories off (they start off — that is required), then save. Try Accept in another private window.</li>
+          <li>In the app, open the consent audit and export the CSV. You should see the decisions you just made, with a timestamp.</li>
+          <li>Skim Settings. You do not need to fill the policy URL unless you want to.</li>
+          <li>Come back the next day, open the storefront again, and note anything that felt unclear the first time.</li>
+        </ul>
+        <p>Stretch, if you are enjoying it: add German under Settings → Languages (or Markets) and open the storefront in German. The banner is written for DE + EN.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Send me feedback</h2>
+      <div class="body">
+        <p>This is the part I need. Email <a href="mailto:support@langkamel.com">support@langkamel.com</a> or message me the way you usually do. Screenshots help. Rough notes are better than a polished essay.</p>
+        <ul>
+          <li>Where did you hesitate or want to quit?</li>
+          <li>Did the banner appear after you saved the theme?</li>
+          <li>Anything that felt legally scary, cheap, or confusing?</li>
+          <li>Would you trust this on a real shop? Why or why not?</li>
+          <li>Did Shopify itself surprise you — in a good way or a bad way?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Review, if you want</h2>
+      <div class="body">
+        <p>Only after you have used it for real (days, not minutes), and only if you want to. I will not follow up to ask for stars.</p>
+        <ol>
+          <li>Keep the app installed on the store you used.</li>
+          <li>Open <a href="https://apps.shopify.com/gdpr-cookie-consent-2">the listing</a>. Use <strong>Write a review</strong> there. Rate the experience you had, in your own language.</li>
+          <li>If the review does not show up, wait. Do not post a second one.</li>
+        </ol>
+        <p>If something was broken and we fix it, you may edit an existing review later. I will never ask you to change a rating in exchange for anything.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>If you get stuck</h2>
+      <div class="body">
+        <p>Ping me. A 15-minute screenshare beats an hour of guessing. Typical traps:</p>
+        <ul>
+          <li>Banner missing → theme editor was not saved.</li>
+          <li>Store looks locked → development-store password page. Use View store from admin.</li>
+          <li>Paid plan screen → close it. Free is enough.</li>
+          <li>Two banners → another cookie app is also on the theme. Turn the other one off in App embeds.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RU ==================== -->
+
+  <main data-content="ru" hidden>
+
+    <section>
+      <h2>О чём я прошу</h2>
+      <div class="body">
+        <p>Две разные просьбы. Первая важнее.</p>
+        <ol>
+          <li><strong>Попробуйте и скажите как есть.</strong> Где застряли, что было непонятно, что кажется сырым. Так приложение доводят до публичного запуска.</li>
+          <li><strong>Отзыв в App Store — по желанию, позже и честный.</strong> Только если вы реально пользовались приложением. Не в тот же день, когда поставили. Не заготовленный текст на пять звёзд. Shopify показывает рядом с отзывом, сколько времени вы пользовались приложением, и снимает отзывы, которые выглядят фейковыми или купленными.</li>
+        </ol>
+        <p>Если после этого появится мысль «а я бы и сам открыл магазин» — это тоже победа. Становиться продавцом не обязательно.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Отзывы — правила</h2>
+      <div class="body">
+        <p class="ceiling">
+          Shopify удаляет фейковые, копипастные, мотивированные наградой и
+          «поставил на 4 минуты» отзывы — и может снять приложение с витрины,
+          если рейтинг выглядит накрученным. Я не могу ничего дать взамен на
+          отзыв: ни деньги, ни ужин, ни скидку, ни услугу. И не могу просить
+          положительный отзыв. Если напишете — только своими словами о том,
+          что вы на самом деле сделали.
+        </p>
+        <ul>
+          <li>Пользуйтесь приложением несколько дней, прежде чем вообще думать об отзыве. Откройте витрину не один раз. Нажмите Accept, Reject и Preferences. Выгрузите CSV с согласиями. Зайдите завтра. В карточке приложения видно <strong>время использования</strong>; считанные минуты выглядят как фейк и для покупателей, и для Shopify.</li>
+          <li>Пишите только то, что правда для вас. Три звезды — нормально. «Я потерялся в редакторе темы» — полезно. Не вставляйте текст, который я вам прислал.</li>
+          <li>Не оставляйте отзыв со второго аккаунта и не оценивайте приложение, которое не ставили.</li>
+          <li>Отзыв можно оставить, пока приложение установлено, или в течение 45 дней после удаления.</li>
+          <li>Отправленный отзыв может появиться не сразу. Shopify сначала проверяет его по своим правилам доверия. Так и должно быть — не отправляйте второй раз.</li>
+        </ul>
+        <p>
+          Если хотите первоисточник:
+          <a href="https://help.shopify.com/en/manual/apps/finding-choosing-apps#app-reviews">как мерчанты оставляют отзывы</a>
+          и
+          <a href="https://help.shopify.com/en/partners/help-support/faq/reviews#shopify-s-review-policies">правила отзывов</a>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>1. Создать магазин</h2>
+      <div class="body">
+        <p>Выберите один путь. Оба не нужны.</p>
+        <p><strong>Путь A — если вы только тестируете</strong> (бесплатно, без срока, без подписки Shopify):</p>
+        <ol>
+          <li>Создайте бесплатный аккаунт Shopify Partner на <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Настоящие имя и почта.</li>
+          <li>Откройте <strong>Stores</strong> и создайте <strong>development store</strong> для тестов и разработки — не магазин «для передачи клиенту». Имя станет адресом <code>something.myshopify.com</code> и его нельзя сменить.</li>
+          <li>Выберите страну. Для этого приложения хорошо подходит Германия; своя страна тоже нормально.</li>
+        </ol>
+        <p><strong>Путь B — если вы сами можете открыть магазин:</strong> обычный Shopify с <a href="https://www.shopify.com">shopify.com</a>. Пробный период короткий, потом платформа платная. Этот путь имеет смысл из любопытства к своему делу, а не как услуга мне.</p>
+        <p>Если Partner-регистрация не пускает — идите по пути B и напишите мне. Не заводите второй аккаунт в обход.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Сделать это магазином</h2>
+      <div class="body">
+        <p>Пустая админка — самый быстрый способ бросить. Десять минут здесь, и Shopify начинает складываться.</p>
+        <ol>
+          <li>Добавьте один товар: <strong>Products → Add product</strong>. Название, цена и фото с телефона достаточно. Save.</li>
+          <li>Откройте <strong>Online Store</strong>. Тема (обычно Dawn) уже стоит. Покупать другую не нужно.</li>
+          <li>Нажмите <strong>View store</strong> хотя бы раз — увидите страницу с паролем. У development-магазинов пароль на витрине остаётся всегда; это не баг. Пароль: Online Store → Preferences. Из админки <strong>View store</strong> пускает без мучений.</li>
+        </ol>
+        <p>По желанию и для кайфа: назовите магазин и товар так, будто они настоящие. Именно от этого хочется попробовать Shopify всерьёз.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Поставить приложение</h2>
+      <div class="body">
+        <ol>
+          <li>Не выходя из этого магазина, откройте <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel в Shopify App Store</a>.</li>
+          <li>Установите. Подтвердите разрешения. Приложение специально просит очень мало.</li>
+          <li>Останьтесь на тарифе <strong>Free</strong>. Платить мне не нужно, а development-магазин часто вообще не может провести живой платный заряд. Если Shopify покажет экран оплаты плана — закройте его и останьтесь на Free.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Включить баннер</h2>
+      <div class="body">
+        <p>Установки мало. Баннер выключен, пока вы не включите его в теме. На главном экране приложения будет кнопка <strong>Enable app embed</strong> — жмите её.</p>
+        <ol>
+          <li>Откроется редактор темы, баннер уже переведён во включённое положение. Нажмите <strong>Save</strong>. Если уйти без сохранения, на живой витрине баннера не будет. На этом спотыкаются почти все.</li>
+          <li>Вернитесь в приложение и нажмите <strong>Open storefront</strong>. Должны быть Accept, Reject и Preferences с одинаковым весом — Reject не спрятан за Settings.</li>
+          <li>Если баннера нет: скорее всего не нажали Save, или смотрите на витрину через пароль. Из админки — View store, затем ещё раз Save в редакторе темы (Online Store → Customize → App embeds или кнопка Enable в приложении).</li>
+        </ol>
+        <p>Chrome для этого спокойнее. Safari в редакторе темы любит ругаться на сторонние cookie — эти предупреждения можно игнорировать.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Пользоваться по делу</h2>
+      <div class="body">
+        <p>Растяните на пару дней, не на один заход. Так же выглядит честный отзыв мерчанта, если до него дойдёт.</p>
+        <ul>
+          <li>Нажмите <strong>Reject</strong>. Обновите страницу. Баннер в этом браузере больше не должен показываться.</li>
+          <li>Откройте магазин в приватном окне и попробуйте <strong>Preferences</strong>: необязательные категории оставьте выключенными (они и так выключены — так и должно быть), сохраните. В другом приватном окне нажмите Accept.</li>
+          <li>В приложении откройте журнал согласий и выгрузите CSV. Там должны быть только что сделанные решения со временем.</li>
+          <li>Гляньте Settings. Политику вписывать не обязательно.</li>
+          <li>На следующий день снова откройте витрину и запишите, что в первый раз было неочевидно.</li>
+        </ul>
+        <p>Если затянуло: добавьте немецкий в Settings → Languages (или Markets) и откройте витрину по-немецки. Баннер сделан для DE и EN.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Написать мне</h2>
+      <div class="body">
+        <p>Это то, что мне нужно. Пишите на <a href="mailto:support@langkamel.com">support@langkamel.com</a> или туда, где мы обычно переписываемся. Скриншоты помогают. Черновик лучше вылизанного эссе.</p>
+        <ul>
+          <li>Где хотелось всё бросить?</li>
+          <li>Баннер появился после Save в теме?</li>
+          <li>Что выглядело юридически страшно, дёшево или непонятно?</li>
+          <li>Поставили бы это на настоящий магазин? Почему да или нет?</li>
+          <li>Сам Shopify удивил — в хорошую сторону или в плохую?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Отзыв, если хотите</h2>
+      <div class="body">
+        <p>Только после того, как реально попользовались (дни, не минуты), и только если сами хотите. Я не буду потом просить звёзды.</p>
+        <ol>
+          <li>Оставьте приложение установленным на том магазине, где тестировали.</li>
+          <li>Откройте <a href="https://apps.shopify.com/gdpr-cookie-consent-2">карточку приложения</a>. Там — <strong>Write a review</strong>. Оцените свой опыт своими словами, на своём языке.</li>
+          <li>Если отзыв не появился — подождите. Второй не отправляйте.</li>
+        </ol>
+        <p>Если что-то сломалось и мы починили, отзыв можно потом отредактировать. Я никогда не попрошу сменить оценку в обмен на что-либо.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Если застряли</h2>
+      <div class="body">
+        <p>Пишите мне. Пятнадцать минут с демонстрацией экрана лучше часа догадок. Типичные ловушки:</p>
+        <ul>
+          <li>Нет баннера → в редакторе темы не нажали Save.</li>
+          <li>Магазин «закрыт» → пароль development-магазина. View store из админки.</li>
+          <li>Экран оплаты → закройте. Free хватает.</li>
+          <li>Два баннера → на теме ещё одно cookie-приложение. Выключите его в App embeds.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer data-content="en">
+    <p>This URL is unlisted. Please do not post it. Product page: <a href="https://langkamel.com/cookie-banner/">langkamel.com/cookie-banner</a>.</p>
+    <p><a href="mailto:support@langkamel.com">support@langkamel.com</a></p>
+  </footer>
+
+  <footer data-content="ru" hidden>
+    <p>Эта ссылка не публичная. Пожалуйста, не выкладывайте её. Страница продукта: <a href="https://langkamel.com/cookie-banner/">langkamel.com/cookie-banner</a>.</p>
+    <p><a href="mailto:support@langkamel.com">support@langkamel.com</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var requestedLang = params.get("lang");
+    var lang = requestedLang === "ru" ? "ru" : "en";
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-content]").forEach(function (element) {
+      element.hidden = element.getAttribute("data-content") !== lang;
+    });
+
+    document.querySelectorAll("[data-lang]").forEach(function (link) {
+      if (link.getAttribute("data-lang") === lang) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    var title = {
+      en: "Alpha — LangKamel GDPR Cookie Banner",
+      ru: "Альфа — LangKamel GDPR Cookie Banner"
+    };
+
+    document.title = title[lang];
+  })();
+</script>
+
+</body>
+</html>
