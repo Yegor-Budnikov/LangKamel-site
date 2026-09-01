@@ -265,8 +265,9 @@
     <div data-content="en">
       <h1>Private alpha</h1>
       <p class="lede">
-        This page is for people I asked personally. It is not linked from the
-        public site. You do not need any Shopify experience.
+        This page is for people I asked personally — friends new to Shopify,
+        and merchants who already run a store. It is not linked from the
+        public site.
       </p>
       <p class="updated">Updated 1 September 2026</p>
     </div>
@@ -275,8 +276,9 @@
     <div data-content="ru" hidden>
       <h1>Закрытая альфа</h1>
       <p class="lede">
-        Эта страница только для тех, кого я попросил лично. С публичного сайта
-        на неё нет ссылок. Опыт работы с Shopify не нужен.
+        Эта страница только для тех, кого я попросил лично — и для друзей без
+        Shopify, и для тех, у кого магазин уже есть. С публичного сайта на
+        неё нет ссылок.
       </p>
       <p class="updated">Обновлено 1 сентября 2026</p>
     </div>
@@ -294,7 +296,7 @@
           <li><strong>Try it and tell me the truth.</strong> Where you got stuck, what was confusing, what felt unfinished. That is how the app gets polished before it goes public.</li>
           <li><strong>A review is optional, later, and honest.</strong> Only if you actually used the app. Not the same afternoon you installed it. Not a five-star script. Shopify publishes how long you used the app next to the review, and they remove reviews that look fake or paid-for.</li>
         </ol>
-        <p>If you come away thinking “I could actually open a shop on this,” that is a win too. No obligation to become a merchant.</p>
+        <p>If you already sell on Shopify, you are the more useful tester: the banner, the theme editor, and a second cookie app (if you have one) behave differently on a real shop than on an empty development store. If you have never used Shopify and come away thinking “I could actually open a shop on this,” that is a win too. No obligation to become a merchant.</p>
       </div>
     </section>
 
@@ -326,16 +328,17 @@
     </section>
 
     <section>
-      <h2>1. Create a store</h2>
+      <h2>1. A store to test on</h2>
       <div class="body">
-        <p>Pick one path. You do not need both.</p>
-        <p><strong>Path A — recommended if you are only testing</strong> (free, does not expire, no Shopify subscription):</p>
+        <p>Pick one path.</p>
+        <p><strong>You already run a Shopify store.</strong> Use that store. Skip step 2. Do not enable the banner on your live, published theme on day one: on Free, every visitor sees it (EU, UK, EEA, and everywhere else). Duplicate the published theme (Online Store → Themes → Duplicate), open the copy in the theme editor, and enable the embed only there. Preview that copy. If another cookie banner is already on the live theme, leave it on for now — two banners on the published store is the failure mode, not the test. Switch the live theme only if you later decide to replace the old banner.</p>
+        <p><strong>Path A — no store yet, only testing</strong> (free, does not expire, no Shopify subscription):</p>
         <ol>
           <li>Create a free Shopify Partner account at <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Use your real name and a real email.</li>
           <li>Open <strong>Stores</strong> and create a <strong>development store</strong> for testing and building — not a “client transfer” store. Give it a name you like; that name becomes the <code>something.myshopify.com</code> address and cannot be changed.</li>
           <li>Choose a country. Germany is a good fit for this app; your own country is fine too.</li>
         </ol>
-        <p><strong>Path B — if you might actually start a shop:</strong> open a regular Shopify store from <a href="https://www.shopify.com">shopify.com</a>. Trials are short and then Shopify charges for the platform. Only use this path if you are curious about becoming a merchant, not as a favour to me.</p>
+        <p><strong>Path B — no store yet, but you might actually start a shop:</strong> open a regular Shopify store from <a href="https://www.shopify.com">shopify.com</a>. Trials are short and then Shopify charges for the platform. Only use this path if you are curious about becoming a merchant, not as a favour to me.</p>
         <p>If Partner signup refuses you, use path B and tell me. Do not create a second account to work around it.</p>
       </div>
     </section>
@@ -343,7 +346,7 @@
     <section>
       <h2>2. Make it feel like a shop</h2>
       <div class="body">
-        <p>An empty admin is the fastest way to bounce. Ten minutes here makes the rest of Shopify click.</p>
+        <p>Skip this step if you already have products and a theme. For a new store: an empty admin is the fastest way to bounce. Ten minutes here makes the rest of Shopify click.</p>
         <ol>
           <li>Add one product: <strong>Products → Add product</strong>. A title, a price, and a photo from your camera roll is enough. Save.</li>
           <li>Open <strong>Online Store</strong>. A theme (usually Dawn) is already there. You do not need to buy one.</li>
@@ -359,7 +362,7 @@
         <ol>
           <li>While you are logged into that store, open <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel on the Shopify App Store</a>.</li>
           <li>Install it. Approve the permissions screen. The app asks for very little on purpose.</li>
-          <li>Stay on the <strong>Free</strong> plan. You do not need to pay me, and a development store often cannot complete a live paid charge anyway. If Shopify shows a paid-plan approval screen, close it and stay on Free.</li>
+          <li>Stay on the <strong>Free</strong> plan unless you already decided to pay. You do not need to pay to test. A development store often cannot complete a live paid charge. If Shopify shows a paid-plan approval screen and you did not mean to upgrade, close it and stay on Free.</li>
         </ol>
       </div>
     </section>
@@ -367,11 +370,11 @@
     <section>
       <h2>4. Turn the banner on</h2>
       <div class="body">
-        <p>Installing the app is not enough. The banner is off until you enable it on the theme. The app’s home screen will offer <strong>Enable app embed</strong> — use that button.</p>
+        <p>Installing the app is not enough. The banner is off until you enable it on a theme. The app’s home screen will offer <strong>Enable app embed</strong> — use that button. If you duplicated a live theme, make sure the editor is open on the copy, not on the published theme.</p>
         <ol>
-          <li>The theme editor opens with the banner already switched on. Press <strong>Save</strong>. If you leave without saving, the live store still has no banner. That trips almost everyone once.</li>
-          <li>Back in the app, click <strong>Open storefront</strong>. You should see Accept, Reject, and Preferences with equal weight — Reject is not hidden behind Settings.</li>
-          <li>If the banner is missing: you probably did not Save, or you are looking at a page that still has the store password in front of it. From admin use View store, then Save again in the theme editor (Online Store → Customize → App embeds, or the Enable button in the app).</li>
+          <li>The theme editor opens with the banner already switched on. Press <strong>Save</strong>. If you leave without saving, that theme still has no banner. That trips almost everyone once.</li>
+          <li>Preview that theme, or click <strong>Open storefront</strong> in the app. You should see Accept, Reject, and Preferences with equal weight — Reject is not hidden behind Settings.</li>
+          <li>If the banner is missing: you probably did not Save, you are on the wrong theme, or a development store still has the password page in front. From admin use View store / Preview, then Save again in the theme editor (Online Store → Customize → App embeds, or the Enable button in the app).</li>
         </ol>
         <p>Chrome is the least painful browser for this. Safari likes to warn about third-party cookies inside the theme editor; ignore those warnings.</p>
       </div>
@@ -395,13 +398,14 @@
     <section>
       <h2>6. Send me feedback</h2>
       <div class="body">
-        <p>This is the part I need. Email <a href="mailto:support@langkamel.com">support@langkamel.com</a> or message me the way you usually do. Screenshots help. Rough notes are better than a polished essay.</p>
+        <p>This is the part I need. Email <a href="mailto:support@langkamel.com">support@langkamel.com</a>. If we already know each other, message me the way you usually do. Screenshots help. Rough notes are better than a polished essay.</p>
         <ul>
           <li>Where did you hesitate or want to quit?</li>
           <li>Did the banner appear after you saved the theme?</li>
           <li>Anything that felt legally scary, cheap, or confusing?</li>
           <li>Would you trust this on a real shop? Why or why not?</li>
-          <li>Did Shopify itself surprise you — in a good way or a bad way?</li>
+          <li>If you already sell: what cookie app do you use today, and what would make you switch or not?</li>
+          <li>If Shopify is new to you: did the platform itself surprise you — in a good way or a bad way?</li>
         </ul>
       </div>
     </section>
@@ -446,7 +450,7 @@
           <li><strong>Попробуйте и скажите как есть.</strong> Где застряли, что было непонятно, что кажется сырым. Так приложение доводят до публичного запуска.</li>
           <li><strong>Отзыв в App Store — по желанию, позже и честный.</strong> Только если вы реально пользовались приложением. Не в тот же день, когда поставили. Не заготовленный текст на пять звёзд. Shopify показывает рядом с отзывом, сколько времени вы пользовались приложением, и снимает отзывы, которые выглядят фейковыми или купленными.</li>
         </ol>
-        <p>Если после этого появится мысль «а я бы и сам открыл магазин» — это тоже победа. Становиться продавцом не обязательно.</p>
+        <p>Если вы уже продаёте на Shopify, вы полезнее: баннер, редактор темы и второе cookie-приложение (если оно есть) на живом магазине ведут себя иначе, чем на пустом development-магазине. Если Shopify вы не знали и появится мысль «а я бы и сам открыл магазин» — это тоже победа. Становиться продавцом не обязательно.</p>
       </div>
     </section>
 
@@ -478,16 +482,17 @@
     </section>
 
     <section>
-      <h2>1. Создать магазин</h2>
+      <h2>1. На каком магазине тестировать</h2>
       <div class="body">
-        <p>Выберите один путь. Оба не нужны.</p>
-        <p><strong>Путь A — если вы только тестируете</strong> (бесплатно, без срока, без подписки Shopify):</p>
+        <p>Выберите один путь.</p>
+        <p><strong>Магазин на Shopify уже есть.</strong> Тестируйте на нём. Шаг 2 пропустите. В первый день не включайте баннер на живой опубликованной теме: на Free его видит каждый посетитель (ЕС, Британия, ЕЭЗ и весь остальной мир). Сдублируйте опубликованную тему (Online Store → Themes → Duplicate), откройте копию в редакторе и включите embed только там. Смотрите Preview этой копии. Если на живой теме уже стоит другой cookie-баннер — пока не трогайте его: два баннера на опубликованном магазине это поломка, а не тест. Живую тему меняйте, только если потом решите заменить старый баннер.</p>
+        <p><strong>Путь A — магазина нет, только тест</strong> (бесплатно, без срока, без подписки Shopify):</p>
         <ol>
           <li>Создайте бесплатный аккаунт Shopify Partner на <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Настоящие имя и почта.</li>
           <li>Откройте <strong>Stores</strong> и создайте <strong>development store</strong> для тестов и разработки — не магазин «для передачи клиенту». Имя станет адресом <code>something.myshopify.com</code> и его нельзя сменить.</li>
           <li>Выберите страну. Для этого приложения хорошо подходит Германия; своя страна тоже нормально.</li>
         </ol>
-        <p><strong>Путь B — если вы сами можете открыть магазин:</strong> обычный Shopify с <a href="https://www.shopify.com">shopify.com</a>. Пробный период короткий, потом платформа платная. Этот путь имеет смысл из любопытства к своему делу, а не как услуга мне.</p>
+        <p><strong>Путь B — магазина нет, но вы сами можете открыть магазин:</strong> обычный Shopify с <a href="https://www.shopify.com">shopify.com</a>. Пробный период короткий, потом платформа платная. Этот путь имеет смысл из любопытства к своему делу, а не как услуга мне.</p>
         <p>Если Partner-регистрация не пускает — идите по пути B и напишите мне. Не заводите второй аккаунт в обход.</p>
       </div>
     </section>
@@ -495,7 +500,7 @@
     <section>
       <h2>2. Сделать это магазином</h2>
       <div class="body">
-        <p>Пустая админка — самый быстрый способ бросить. Десять минут здесь, и Shopify начинает складываться.</p>
+        <p>Этот шаг пропустите, если товары и тема уже есть. Для нового магазина: пустая админка — самый быстрый способ бросить. Десять минут здесь, и Shopify начинает складываться.</p>
         <ol>
           <li>Добавьте один товар: <strong>Products → Add product</strong>. Название, цена и фото с телефона достаточно. Save.</li>
           <li>Откройте <strong>Online Store</strong>. Тема (обычно Dawn) уже стоит. Покупать другую не нужно.</li>
@@ -511,7 +516,7 @@
         <ol>
           <li>Не выходя из этого магазина, откройте <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel в Shopify App Store</a>.</li>
           <li>Установите. Подтвердите разрешения. Приложение специально просит очень мало.</li>
-          <li>Останьтесь на тарифе <strong>Free</strong>. Платить мне не нужно, а development-магазин часто вообще не может провести живой платный заряд. Если Shopify покажет экран оплаты плана — закройте его и останьтесь на Free.</li>
+          <li>Останьтесь на тарифе <strong>Free</strong>, если вы сами не решили платить. Для теста платить не нужно. Development-магазин часто не проводит живой платный заряд. Если Shopify показал экран оплаты плана, а апгрейд вы не собирались делать — закройте его и останьтесь на Free.</li>
         </ol>
       </div>
     </section>
@@ -519,11 +524,11 @@
     <section>
       <h2>4. Включить баннер</h2>
       <div class="body">
-        <p>Установки мало. Баннер выключен, пока вы не включите его в теме. На главном экране приложения будет кнопка <strong>Enable app embed</strong> — жмите её.</p>
+        <p>Установки мало. Баннер выключен, пока вы не включите его в теме. На главном экране приложения будет кнопка <strong>Enable app embed</strong> — жмите её. Если вы дублировали живую тему, редактор должен быть открыт на копии, не на опубликованной теме.</p>
         <ol>
-          <li>Откроется редактор темы, баннер уже переведён во включённое положение. Нажмите <strong>Save</strong>. Если уйти без сохранения, на живой витрине баннера не будет. На этом спотыкаются почти все.</li>
-          <li>Вернитесь в приложение и нажмите <strong>Open storefront</strong>. Должны быть Accept, Reject и Preferences с одинаковым весом — Reject не спрятан за Settings.</li>
-          <li>Если баннера нет: скорее всего не нажали Save, или смотрите на витрину через пароль. Из админки — View store, затем ещё раз Save в редакторе темы (Online Store → Customize → App embeds или кнопка Enable в приложении).</li>
+          <li>Откроется редактор темы, баннер уже переведён во включённое положение. Нажмите <strong>Save</strong>. Если уйти без сохранения, на этой теме баннера не будет. На этом спотыкаются почти все.</li>
+          <li>Откройте Preview этой темы или в приложении нажмите <strong>Open storefront</strong>. Должны быть Accept, Reject и Preferences с одинаковым весом — Reject не спрятан за Settings.</li>
+          <li>Если баннера нет: скорее всего не нажали Save, открыта не та тема, или у development-магазина витрина за паролем. Из админки — View store / Preview, затем ещё раз Save в редакторе темы (Online Store → Customize → App embeds или кнопка Enable в приложении).</li>
         </ol>
         <p>Chrome для этого спокойнее. Safari в редакторе темы любит ругаться на сторонние cookie — эти предупреждения можно игнорировать.</p>
       </div>
@@ -547,13 +552,14 @@
     <section>
       <h2>6. Написать мне</h2>
       <div class="body">
-        <p>Это то, что мне нужно. Пишите на <a href="mailto:support@langkamel.com">support@langkamel.com</a> или туда, где мы обычно переписываемся. Скриншоты помогают. Черновик лучше вылизанного эссе.</p>
+        <p>Это то, что мне нужно. Пишите на <a href="mailto:support@langkamel.com">support@langkamel.com</a>. Если мы и так переписываемся — туда, где обычно. Скриншоты помогают. Черновик лучше вылизанного эссе.</p>
         <ul>
           <li>Где хотелось всё бросить?</li>
           <li>Баннер появился после Save в теме?</li>
           <li>Что выглядело юридически страшно, дёшево или непонятно?</li>
           <li>Поставили бы это на настоящий магазин? Почему да или нет?</li>
-          <li>Сам Shopify удивил — в хорошую сторону или в плохую?</li>
+          <li>Если уже продаёте: какое cookie-приложение стоит сейчас, и что заставило бы сменить или не сменять?</li>
+          <li>Если Shopify новый: сама платформа удивила — в хорошую сторону или в плохую?</li>
         </ul>
       </div>
     </section>
