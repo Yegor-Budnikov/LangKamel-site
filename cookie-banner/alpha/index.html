@@ -269,7 +269,7 @@
         and merchants who already run a store. It is not linked from the
         public site.
       </p>
-      <p class="updated">Updated 1 September 2026</p>
+      <p class="updated">Updated 1 September 2026 · store signup re-checked the same day</p>
     </div>
 
     <!-- RU -->
@@ -280,7 +280,7 @@
         Shopify, и для тех, у кого магазин уже есть. С публичного сайта на
         неё нет ссылок.
       </p>
-      <p class="updated">Обновлено 1 сентября 2026</p>
+      <p class="updated">Обновлено 1 сентября 2026 · регистрация магазина перепроверена в тот же день</p>
     </div>
   </header>
 
@@ -332,27 +332,21 @@
       <div class="body">
         <p>Pick one path.</p>
         <p><strong>You already run a Shopify store.</strong> Use that store. Skip step 2. Do not enable the banner on your live, published theme on day one: on Free, every visitor sees it (EU, UK, EEA, and everywhere else). Duplicate the published theme (Online Store → Themes → Duplicate), open the copy in the theme editor, and enable the embed only there. Preview that copy. If another cookie banner is already on the live theme, leave it on for now — two banners on the published store is the failure mode, not the test. Switch the live theme only if you later decide to replace the old banner.</p>
-        <p><strong>Path A — no store yet, only testing</strong> (free, does not expire, no Shopify subscription):</p>
-        <ol>
-          <li>Create a free Shopify Partner account at <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Use your real name and a real email.</li>
-          <li>Open <strong>Stores</strong> and create a <strong>development store</strong> for testing and building — not a “client transfer” store. Give it a name you like; that name becomes the <code>something.myshopify.com</code> address and cannot be changed.</li>
-          <li>Choose a country. Germany is a good fit for this app; your own country is fine too.</li>
-        </ol>
-        <p><strong>Path B — no store yet, but you might actually start a shop:</strong> open a regular Shopify store from <a href="https://www.shopify.com">shopify.com</a>. Trials are short and then Shopify charges for the platform. Only use this path if you are curious about becoming a merchant, not as a favour to me.</p>
-        <p>If Partner signup refuses you, use path B and tell me. Do not create a second account to work around it.</p>
+        <p><strong>No store yet — use shopify.com, not Partners.</strong> Open <a href="https://www.shopify.com">shopify.com</a> and start a store. Shopify will ask for a card (Revolut is fine). After the card it will try to sell extra things — Payments, a domain, POS, apps, a paid plan. Skip / Not now / close those until you land in the empty admin. The trial is short; the card can be charged when it ends, so cancel the Shopify subscription if you were only testing.</p>
+        <p>Do not sign up at partners.shopify.com for this. That flow is for agencies and app developers. It asks several extra questions (including “What’s your main focus as a Shopify partner?”) that only pick training recommendations. If you already started it: choose <strong>Other</strong>, not Build apps — you are not building an app. Then stop and use shopify.com instead.</p>
       </div>
     </section>
 
     <section>
-      <h2>2. Make it feel like a shop</h2>
+      <h2>2. Name, one product, theme</h2>
       <div class="body">
-        <p>Skip this step if you already have products and a theme. For a new store: an empty admin is the fastest way to bounce. Ten minutes here makes the rest of Shopify click.</p>
+        <p>Skip this step if you already have products and a theme. After the upsell screens the admin is empty — that is normal. Do these three things, then stop. You do not need a custom domain, Shopify Payments, or a paid theme.</p>
         <ol>
-          <li>Add one product: <strong>Products → Add product</strong>. A title, a price, and a photo from your camera roll is enough. Save.</li>
-          <li>Open <strong>Online Store</strong>. A theme (usually Dawn) is already there. You do not need to buy one.</li>
-          <li>Click <strong>View store</strong> at least once so you see the password page. Development stores keep a password gate on the public site — that is normal, not a bug. The password is under Online Store → Preferences. From admin, <strong>View store</strong> lets you in.</li>
+          <li><strong>Name.</strong> Bottom-left gear → <strong>Settings → General</strong>. Under Store contact details, click the store name (it often starts as “My Store”). Change <strong>Store name</strong> → Save. That is the public name on the site. It does not change the <code>something.myshopify.com</code> address.</li>
+          <li><strong>One product.</strong> Left menu → <strong>Products → Add product</strong>. A title, a price, and a photo from your camera roll. Check that <strong>Online Store</strong> is listed as a sales channel (on by default). Save. Shopify’s own steps: <a href="https://help.shopify.com/en/manual/products/add-update-products">add a product</a>.</li>
+          <li><strong>Theme.</strong> Left menu → <strong>Online Store → Themes</strong>. A free theme is already published — do not buy another. Click <strong>View store</strong> (or the eye). If you hit a password page, that is Shopify hiding an unfinished shop, not a broken store. View store from admin lets you in. You do not need to “launch” or remove the password to test the banner.</li>
         </ol>
-        <p>Optional and fun: give the shop a name and a product that could be real. That is the bit that makes people want to try Shopify for themselves.</p>
+        <p>Give the shop and the product names that could be real. That is the bit that makes Shopify feel like a store instead of a form.</p>
       </div>
     </section>
 
@@ -362,7 +356,7 @@
         <ol>
           <li>While you are logged into that store, open <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel on the Shopify App Store</a>.</li>
           <li>Install it. Approve the permissions screen. The app asks for very little on purpose.</li>
-          <li>Stay on the <strong>Free</strong> plan unless you already decided to pay. You do not need to pay to test. A development store often cannot complete a live paid charge. If Shopify shows a paid-plan approval screen and you did not mean to upgrade, close it and stay on Free.</li>
+          <li>Stay on the <strong>Free</strong> plan unless you already decided to pay. You do not need to pay to test. If Shopify shows a paid-plan approval screen and you did not mean to upgrade, close it and stay on Free. This is a real store with a card on file — approving Basic or Pro can bill you after the trial.</li>
         </ol>
       </div>
     </section>
@@ -374,7 +368,7 @@
         <ol>
           <li>The theme editor opens with the banner already switched on. Press <strong>Save</strong>. If you leave without saving, that theme still has no banner. That trips almost everyone once.</li>
           <li>Preview that theme, or click <strong>Open storefront</strong> in the app. You should see Accept, Reject, and Preferences with equal weight — Reject is not hidden behind Settings.</li>
-          <li>If the banner is missing: you probably did not Save, you are on the wrong theme, or a development store still has the password page in front. From admin use View store / Preview, then Save again in the theme editor (Online Store → Customize → App embeds, or the Enable button in the app).</li>
+          <li>If the banner is missing: you probably did not Save, you are on the wrong theme, or the storefront is still behind Shopify’s password page. From admin use View store / Preview, then Save again in the theme editor (Online Store → Customize → App embeds, or the Enable button in the app).</li>
         </ol>
         <p>Chrome is the least painful browser for this. Safari likes to warn about third-party cookies inside the theme editor; ignore those warnings.</p>
       </div>
@@ -391,7 +385,7 @@
           <li>Skim Settings. You do not need to fill the policy URL unless you want to.</li>
           <li>Come back the next day, open the storefront again, and note anything that felt unclear the first time.</li>
         </ul>
-        <p>Stretch, if you are enjoying it: add German under Settings → Languages (or Markets) and open the storefront in German. The banner is written for DE + EN.</p>
+        <p>Stretch, if you are enjoying it: if the admin has a language or markets setting, add German and open the storefront in German. The banner is written for DE + EN.</p>
       </div>
     </section>
 
@@ -429,7 +423,7 @@
         <p>Ping me. A 15-minute screenshare beats an hour of guessing. Typical traps:</p>
         <ul>
           <li>Banner missing → theme editor was not saved.</li>
-          <li>Store looks locked → development-store password page. Use View store from admin.</li>
+          <li>Store looks locked → unfinished-shop password page. Use View store from admin.</li>
           <li>Paid plan screen → close it. Free is enough.</li>
           <li>Two banners → another cookie app is also on the theme. Turn the other one off in App embeds.</li>
         </ul>
@@ -486,27 +480,21 @@
       <div class="body">
         <p>Выберите один путь.</p>
         <p><strong>Магазин на Shopify уже есть.</strong> Тестируйте на нём. Шаг 2 пропустите. В первый день не включайте баннер на живой опубликованной теме: на Free его видит каждый посетитель (ЕС, Британия, ЕЭЗ и весь остальной мир). Сдублируйте опубликованную тему (Online Store → Themes → Duplicate), откройте копию в редакторе и включите embed только там. Смотрите Preview этой копии. Если на живой теме уже стоит другой cookie-баннер — пока не трогайте его: два баннера на опубликованном магазине это поломка, а не тест. Живую тему меняйте, только если потом решите заменить старый баннер.</p>
-        <p><strong>Путь A — магазина нет, только тест</strong> (бесплатно, без срока, без подписки Shopify):</p>
-        <ol>
-          <li>Создайте бесплатный аккаунт Shopify Partner на <a href="https://www.shopify.com/partners">shopify.com/partners</a>. Настоящие имя и почта.</li>
-          <li>Откройте <strong>Stores</strong> и создайте <strong>development store</strong> для тестов и разработки — не магазин «для передачи клиенту». Имя станет адресом <code>something.myshopify.com</code> и его нельзя сменить.</li>
-          <li>Выберите страну. Для этого приложения хорошо подходит Германия; своя страна тоже нормально.</li>
-        </ol>
-        <p><strong>Путь B — магазина нет, но вы сами можете открыть магазин:</strong> обычный Shopify с <a href="https://www.shopify.com">shopify.com</a>. Пробный период короткий, потом платформа платная. Этот путь имеет смысл из любопытства к своему делу, а не как услуга мне.</p>
-        <p>Если Partner-регистрация не пускает — идите по пути B и напишите мне. Не заводите второй аккаунт в обход.</p>
+        <p><strong>Магазина нет — shopify.com, не Partners.</strong> Откройте <a href="https://www.shopify.com">shopify.com</a> и создайте магазин. Shopify попросит карту (Revolut подходит). После карты начнёт продавать лишнее — Payments, домен, POS, приложения, платный план. Skip / Not now / закрывайте, пока не окажетесь в пустой админке. Пробный период короткий; когда он кончится, карту могут списать — отмените подписку Shopify, если вы только тестировали.</p>
+        <p>Не регистрируйтесь на partners.shopify.com ради этого. Тот поток для агентств и разработчиков приложений. Там несколько лишних вопросов (в том числе «What’s your main focus as a Shopify partner?»), и они только подбирают обучение. Если вы уже туда зашли: выберите <strong>Other</strong>, не Build apps — вы приложение не пишете. Потом остановитесь и идите через shopify.com.</p>
       </div>
     </section>
 
     <section>
-      <h2>2. Сделать это магазином</h2>
+      <h2>2. Имя, один товар, тема</h2>
       <div class="body">
-        <p>Этот шаг пропустите, если товары и тема уже есть. Для нового магазина: пустая админка — самый быстрый способ бросить. Десять минут здесь, и Shopify начинает складываться.</p>
+        <p>Этот шаг пропустите, если товары и тема уже есть. После экранов с допродажами админка пустая — так и должно быть. Сделайте три вещи и остановитесь. Свой домен, Shopify Payments и платная тема не нужны.</p>
         <ol>
-          <li>Добавьте один товар: <strong>Products → Add product</strong>. Название, цена и фото с телефона достаточно. Save.</li>
-          <li>Откройте <strong>Online Store</strong>. Тема (обычно Dawn) уже стоит. Покупать другую не нужно.</li>
-          <li>Нажмите <strong>View store</strong> хотя бы раз — увидите страницу с паролем. У development-магазинов пароль на витрине остаётся всегда; это не баг. Пароль: Online Store → Preferences. Из админки <strong>View store</strong> пускает без мучений.</li>
+          <li><strong>Имя.</strong> Шестерёнка слева внизу → <strong>Settings → General</strong>. В Store contact details нажмите имя магазина (часто стоит «My Store»). Смените <strong>Store name</strong> → Save. Это публичное имя на сайте. Адрес <code>something.myshopify.com</code> от этого не меняется.</li>
+          <li><strong>Один товар.</strong> Слева → <strong>Products → Add product</strong>. Название, цена и фото с телефона. Проверьте, что канал <strong>Online Store</strong> включён (так и бывает по умолчанию). Save. Шаги Shopify: <a href="https://help.shopify.com/en/manual/products/add-update-products">добавить товар</a>.</li>
+          <li><strong>Тема.</strong> Слева → <strong>Online Store → Themes</strong>. Бесплатная тема уже опубликована — вторую покупать не нужно. Нажмите <strong>View store</strong> (или глаз). Если вылез пароль — Shopify прячет недоделанный магазин, это не поломка. View store из админки пускает. «Запускать» магазин и снимать пароль, чтобы проверить баннер, не нужно.</li>
         </ol>
-        <p>По желанию и для кайфа: назовите магазин и товар так, будто они настоящие. Именно от этого хочется попробовать Shopify всерьёз.</p>
+        <p>Назовите магазин и товар так, будто они настоящие. Тогда Shopify начинает быть магазином, а не анкетой.</p>
       </div>
     </section>
 
@@ -516,7 +504,7 @@
         <ol>
           <li>Не выходя из этого магазина, откройте <a href="https://apps.shopify.com/gdpr-cookie-consent-2">LangKamel в Shopify App Store</a>.</li>
           <li>Установите. Подтвердите разрешения. Приложение специально просит очень мало.</li>
-          <li>Останьтесь на тарифе <strong>Free</strong>, если вы сами не решили платить. Для теста платить не нужно. Development-магазин часто не проводит живой платный заряд. Если Shopify показал экран оплаты плана, а апгрейд вы не собирались делать — закройте его и останьтесь на Free.</li>
+          <li>Останьтесь на тарифе <strong>Free</strong>, если вы сами не решили платить. Для теста платить не нужно. Если Shopify показал экран оплаты плана, а апгрейд вы не собирались делать — закройте его и останьтесь на Free. Это настоящий магазин с картой: одобрение Basic или Pro после триала может списать деньги.</li>
         </ol>
       </div>
     </section>
@@ -528,7 +516,7 @@
         <ol>
           <li>Откроется редактор темы, баннер уже переведён во включённое положение. Нажмите <strong>Save</strong>. Если уйти без сохранения, на этой теме баннера не будет. На этом спотыкаются почти все.</li>
           <li>Откройте Preview этой темы или в приложении нажмите <strong>Open storefront</strong>. Должны быть Accept, Reject и Preferences с одинаковым весом — Reject не спрятан за Settings.</li>
-          <li>Если баннера нет: скорее всего не нажали Save, открыта не та тема, или у development-магазина витрина за паролем. Из админки — View store / Preview, затем ещё раз Save в редакторе темы (Online Store → Customize → App embeds или кнопка Enable в приложении).</li>
+          <li>Если баннера нет: скорее всего не нажали Save, открыта не та тема, или витрина ещё за паролем Shopify. Из админки — View store / Preview, затем ещё раз Save в редакторе темы (Online Store → Customize → App embeds или кнопка Enable в приложении).</li>
         </ol>
         <p>Chrome для этого спокойнее. Safari в редакторе темы любит ругаться на сторонние cookie — эти предупреждения можно игнорировать.</p>
       </div>
@@ -545,7 +533,7 @@
           <li>Гляньте Settings. Политику вписывать не обязательно.</li>
           <li>На следующий день снова откройте витрину и запишите, что в первый раз было неочевидно.</li>
         </ul>
-        <p>Если затянуло: добавьте немецкий в Settings → Languages (или Markets) и откройте витрину по-немецки. Баннер сделан для DE и EN.</p>
+        <p>Если затянуло: если в админке есть настройки языка или рынков — добавьте немецкий и откройте витрину по-немецки. Баннер сделан для DE и EN.</p>
       </div>
     </section>
 
@@ -583,7 +571,7 @@
         <p>Пишите мне. Пятнадцать минут с демонстрацией экрана лучше часа догадок. Типичные ловушки:</p>
         <ul>
           <li>Нет баннера → в редакторе темы не нажали Save.</li>
-          <li>Магазин «закрыт» → пароль development-магазина. View store из админки.</li>
+          <li>Магазин «закрыт» → пароль недоделанного магазина. View store из админки.</li>
           <li>Экран оплаты → закройте. Free хватает.</li>
           <li>Два баннера → на теме ещё одно cookie-приложение. Выключите его в App embeds.</li>
         </ul>
